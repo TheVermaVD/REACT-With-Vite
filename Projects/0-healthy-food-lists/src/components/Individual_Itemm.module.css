@@ -1,0 +1,18 @@
+.kg-item{
+    margin-top: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 600;
+  
+  }
+
+  #kg-align{
+    text-align: center;
+  }
+
+  .button{
+
+    float: right;
+ 
+    
+  }
