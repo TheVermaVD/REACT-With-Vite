@@ -1,0 +1,171 @@
+
+
+
+#1.) Tailwind CSS : -
+
+i) Tailwind CSS is a utility-first CSS framework means It comes with many classes like text, color, padding, flex, grid, p-4. rotate-90 etc, with highly customizable all these classes with squarebacket like class="bg-[#50d71e]" unlike bootstrap.
+
+ii) Without leaving our HTML/JSX Page or React Component, TailwindCSS rapidly builds modern websites in no-time.
+
+iii) TailwindCSS used mostly with ReactJS Projects, in compare with Bootstrap.
+
+iv) It also provides responsive utility classes as well as keep very less custom CSS files in small.
+
+v) It is very light weighted compare to bootstrap CSS and material UI CSS frameworks coz it uses only the requires css after compilation from output.css and removes unused classes. As In TailwindCSS, each part of the css applying we have seperate class unlike bootstrap which combines all at a time e.g button.
+
+vi) We get rapid development using tailwind css and production ready application using Tailwind CSS utility classes.
+
+vii) A Real-time example, Chatgpt application uses Tailwind CSS.
+
+
+
+
+#2.) Get started with Tailwind CSS and Installation : -
+
+i) Firstly use 'Taiwind CSS IntelliSence' to your code editor/VS code for getting tailwindCss suggestions. //OR, install it globally at system. and also add extension 'Tailwind Docs' from vs code.
+
+ii) To play around with Tailwind CSS, use website : https://play.tailwindcss.com/
+
+iii) To use Tailwind CSS Predefined component or template use website : https://tailblocks.cc/
+
+iv) Installion of Tailwind CSS : - Using two ways mostly -
+
+      a) Using TailwindCSS CDN LInk (Not Recommended) :-  Use CDN to try Tailwind right in the browser without any build step. The CDN is designed for development purposes only, and is not intended for production remember.
+
+     Add Below script to your html <head> section, which will compile all CSS file into your HTML page -
+       
+     <script src="https://cdn.tailwindcss.com"></script>  --> Ready to use Tailwind CSS utility classes.
+
+
+     Note : Tailwind CSS Intellisense does not work with using CDN, It only works with using CLI or other ways.
+
+
+     To add cutsom-css in CDN : Use type="text/tailwindcss" to add custom CSS that supports all of Tailwind's CSS features.
+
+        <!doctype html>
+        <html>
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            <style type="text/tailwindcss">
+
+            @theme {
+                --color-rowdy: #da373d;
+            }
+
+            </style>
+        </head>
+        <body>
+            <h1 class="text-3xl font-bold underline text-rowdy">
+            Hello world!
+            </h1>
+        </body>
+        </html>
+
+
+
+    b(i) (Recommended) Using Vite For React To install Tailwind In React -
+
+      Step1 : Install tailwindcss and @tailwindcss/vite via npm -
+
+            > npm install tailwindcss @tailwindcss/vite
+
+      step2 : Inside 'vite.config.ts' file, Configure Installed @tailwindcss/vite i.e Tailwind vite plugin as follows -
+
+            import tailwindcss from '@tailwindcss/vite' -->Firstly Import at Top and then add/call tailwindCSS() method inside plugins array -
+
+            export default defineConfig({
+            plugins: [  react(),
+                tailwindcss(),
+            ],
+            })
+
+      Step3 : Finally Import the Tailwind CSS to the React main.css or App.css file as -
+
+            @import "tailwindcss";      
+
+
+      Now, Ready to use TailwindCSS In Your React Project, if makes any error run once the , >npm run dev
+
+
+    Note : As Tailwind CSs works with compiled CSS i.e output.css. So, Make sure your compiled CSS(Output.css) is included in the <head> (your framework might handle this for you), then start using Tailwind’s utility classes to style your content. Like this -
+
+     <link href="/src/ouput.css" rel="stylesheet">
+
+     Though, Our React already merge the main.css and App.css in the <head> of html page, so when we include the tailwind CSS as @import "tailwindcss"; to main.css then it atomatically gets applied to whole React Page.
+
+     
+
+    b(ii) (Also Recommended) Using CLI for Tailwind  : -
+
+      step1: Install tailwindcss via npm under dev dependencies, and create your tailwind.config.js file 
+    
+        >npm install -D tailwindcss
+        >npx tailwindcss init  (To start/initiate/config/active Tailwind in your project, will create a tailwind.config.js file)
+        
+
+      step2 : Configure your template paths/Update the config file - 
+      
+      Add the paths i.e content path as content: ["*.html"] in tailwind.config.js file -
+
+            /** @type {import('tailwindcss').Config} */
+
+            module.exports = {
+
+            content: ["./src/**/*.{html,js}"], //watch all where .html and .js file extention found under src.
+
+            theme: {
+
+                extend: {},
+
+            },
+
+            plugins: [],
+
+            }
+
+        step3: Make a input.css i.e Create src/input.css under root of your project to add the Tailwind directives to your CSS - and include below so tailwind css include all these or even additionally we can add other css to here  -
+
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+
+        step4: Start the Tailwind CLI build process/ Run build command  -
+
+            TO watch file which specified in in tailwind.config.js file at content : [] and scan your template files for classes and build your CSS, run below CLI -
+
+            >npx tailwindcss -i ./src/input.css -o ./src/output.css --watch   
+
+        step5: Attached i.e Link the generated CSS file i.e 'output.css' to the main index.hmtl file as under head -
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="./output.css" rel="stylesheet">
+            </head>
+
+
+            
+
+Note : >npx tailwindcss -i ./src/input.css -o ./src/output.css --watch 
+
+This command is used to run Tailwind CSS through Node Package Executor (npx) and process a CSS file using Tailwind's utility-based framework. Here’s a breakdown of what each part does:
+
+Command Explanation:
+    npx: npx is a command from Node.js that allows you to execute binaries from npm packages without installing them globally.
+    It runs the tailwindcss CLI tool for this operation.
+
+    tailwindcss: This is the Tailwind CSS CLI tool that handles CSS processing.
+
+    -i ./src/input.css: The -i flag specifies the input file.
+
+    ./src/input.css is the path to the CSS file you want to process with Tailwind. This file typically includes the @tailwind directives (e.g., @tailwind base;, @tailwind components;, @tailwind utilities;) to include the Tailwind framework styles.
+    -o ./src/output.css:
+
+    The -o flag specifies the output file.
+    ./src/output.css is the path where the processed CSS will be saved. This file will contain all the compiled Tailwind CSS styles based on the input and your configuration.
+    --watch:
+
+    This flag enables watch mode.
+    It monitors changes in your input file (and other relevant files, such as your HTML/JS files if using Tailwind's Just-in-Time mode) and automatically recompiles the CSS when changes are detected.

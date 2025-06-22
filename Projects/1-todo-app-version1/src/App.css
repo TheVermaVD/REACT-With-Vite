@@ -1,0 +1,25 @@
+/* Note: If We add css to any top level file of .jsx then all the lower componets i.e child or grandchild components can have this CSS accessibility; so if want to add different css to different component always assign a unique name class or id name to each component, OR, use react css module way of attaching CSS to desire component only. */
+
+/* Note: The css which are common in two or more components that we keep inside the universal CSS folder like App.css and those css which are only responsive for particular component that we keep inside css module folder. For our understanding. */
+
+
+
+input {
+    width: 100%
+}
+
+.todo-items {
+    text-align: start;
+}
+
+.kg-row {
+    margin: 10px 5px;
+}
+
+.kg-button {
+    min-width: 80px;
+}
+
+.kg-align{
+    text-align: start;
+}

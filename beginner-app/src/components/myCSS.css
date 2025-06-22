@@ -1,0 +1,12 @@
+
+body{
+    background-color: rgba(16, 16, 17, 0.26);
+}
+
+.center{
+    text-align: center;
+}
+
+#text-color{
+    color: darkmagenta;
+}
