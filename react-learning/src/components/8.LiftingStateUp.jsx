@@ -6,11 +6,14 @@ import { ContextElement } from "../store/userContext";
 
 //Note : Lifting state up usually happen when working up with event handlers  i.e event trigger in child component occurr/result something as parent component.
 
-//Enable upwrard communication from child to parent.
-//It is commonly used for event handling.
+//Enable upward communication from child to parent.
+//It is used commonly with event handling when we define the handler function not in the same i.e child component, we define it in the parent component and We send this handler function to CHild Comp props.This again states that a UI component is completly blind/dumb it doesnot have any main logic to handler, whatever parent component tell, this child comp will render on UI. 
+// 
+// In other word, Parent component also pass behaviour to the child component along with passing props data, we consider in React, each UI component only responsible for displaying UI only.
+
+
 //Parent defines a function and child invokes it.
-//It enhances component interactivity.
-//Example : <Button onClick={handleClick} />
+
 
 /*
 

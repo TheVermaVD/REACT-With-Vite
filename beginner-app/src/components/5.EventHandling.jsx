@@ -14,6 +14,25 @@ export default function EventHandling() {
 
     // Note : When calling event handler function without argument then just pass the function defination without call. But but if there is function call with argument passed(also for console.log() or any method used ) then user must wrapp this into a arrow function or anonymous function.
 
+    /*
+
+    // Mouse Events : onClick, onMousedown
+
+
+    // Form Events : -
+
+    onChange ---> when there is any change or enter happend in input value
+    onInput
+    onFocus
+    onBlur
+    onSubmit
+
+    
+    
+    
+    
+    */
+
 
 
 
@@ -48,11 +67,10 @@ export default function EventHandling() {
 
     }
 
-    //Note : To update the JSX variable with Event triggering we need to store that data in the state_Variable which can change or mpodify over time, handled by useState() state Hook which is state changes/management.
+    //Note : To update the JSX variable with Event triggering we need to store that data in the state_Variable which can change or modifiable over time, handled by useState() state Hook which is state changes/management.
 
-    // event object : whenever we working with any Events we get an event object bydrfault in the handler function, by which we can get more controll over that applied event.
+    // event object : whenever we working with any Events we get an event object bydefault in the handler function, by which we can get more controll over that applied event.
 
-    // Task : Task on User Image to Pop-up : Hi to user with smily -
 
     // window.onwheel = function(e){
     //   console.log("Wheeling on 'document' object of the Browser")
@@ -78,6 +96,8 @@ export default function EventHandling() {
 
     // console.log(window.pageYOffset)
 
+
+  // Task : Task on User Image to Pop-up : Hi to user with smily -
     const [showText, setShowText] = useState(false)
 
     function handleShowText(){

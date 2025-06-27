@@ -12,14 +12,42 @@ import Hooks_and_State from './components/6.Hooks_and_State'
 import LazyInitialization from './components/9.LazyInitialization'
 import UseStatewithObjectData from './components/7.useStatewithObjectData'
 import UseStatewithArrayData from './components/8.useStatewithArrayData'
-import UseRef from './components/11.useRef'
+import LearningChildrenProps from './components/1a.ChildrenProps'
+import FormHandling from './components/10.FormHandling'
+import UseRefHook from './components/11.useRefHook'
+import LiftingState from './components/12.LiftingState'
+import LiftingState2 from './components/12a.LiftingState2'
+import UseEffectHook from './components/13.useEffectHook'
 
 
 
 function App() {
-  // const [count, setCount] = useState(0)
 
-  console.log("From App or App.jsx")
+  // # In case of className, to mix custom class name with bootstrap  or tailwind class name. then -
+
+  // <h1 className = {`  ${style.heading}  bg-red-500 `} > Ram is great !! </h1>
+
+  console.log("App.jsx get Rendered...!!")
+
+  const getName = (inputName)=>{
+
+    console.log(inputName)
+  }
+
+  // Ways2 : Lifting State Up-
+  const [name, setName] = useState("")
+
+  const handleInputChange = (e)=>{
+
+    setName(e.target.value)
+  }
+
+  const handleGetName = ()=>{
+
+    console.log(name)
+
+
+  }
 
   return <>
   
@@ -28,30 +56,44 @@ function App() {
 
   {/* <KGButton/>
    */}
-   {/* <Hello/>
-   <Hello/>
-   <Hello/> */}
+   {/* <HelloReact/>
+   HelloReact/>
+   <HelloReact/> */}
 
    {/* <LearningProps a = "We larning Props" b = {4} c = {23} /> */}
+
+   <LearningChildrenProps>
+    
+    <b>Hey I'm Children Data....!! </b>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, error sapiente? Maiores provident sit cumque deserunt deleniti cupiditate molestias laborum.</p>
+    
+   </LearningChildrenProps >
 
    {/* <ListRendering/> */}
 
    {/* <ConditionalRendering/> */}
 
-   <AddingCSSandImages/>
+   {/* <AddingCSSandImages/>
    <EventHandling/>
 
-   <Hooks_and_State/>
+   <Hooks_and_State/> */}
 
-   <UseStatewithObjectData/>
-   <UseStatewithArrayData/>
+   {/* <UseStatewithObjectData/>
+   <UseStatewithArrayData/> */}
 
-   <LazyInitialization/>
+   {/* <LazyInitialization/> */}
+{/* 
+  
+   <LiftingState userName = "Prakash" getName={getName} />
+   <LiftingState2 handleGetName={handleGetName} handleInputChange={handleInputChange}  /> */}
 
-   <UseRef/>
+   {/* <FormHandling/> */}
 
+   {/* <UseEffectHook/> */}
 
-  </>
+   <UseRefHook/> 
+
+</>
 
 }
 

@@ -12,8 +12,12 @@ export default function UseStatewithObjectData(){
       const [objectData, setObjectData] = useState({count : 0, clicks : 0})
     
       function handlerObject(){
+
+        // setObjData({count : objData.count + 1, clicks : objData.clicks + 1})
     
         // setObjectData({...objectData , count : objectData.count +1, clicks : objectData.clicks + 1}  )
+
+        // setObjData(prevData =>  ({count : prevData.count+1, clicks : prevData.clicks+1  })  )
     
         setObjectData( prevData  => {
     
@@ -45,6 +49,16 @@ export default function UseStatewithObjectData(){
 
 
     // Ex: 3 - Task is As User Enter a New Data on Input Element and as soon as user click on button to update then It updates the New Data -(Need to Have basic form handling knowledge)
+
+
+
+
+      // ------------- CHECK FILE : FormHanding.jsx ----------------------
+
+
+
+
+
 
 
      return <> 

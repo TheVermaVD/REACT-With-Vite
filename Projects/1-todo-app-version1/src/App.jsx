@@ -6,8 +6,7 @@ import "./App.css";
 import TodoItems from "./components/TodoItems";
 
 function App() {
-  {
-  }
+
   const todoItems = [
     {
       name: "Go TO College",

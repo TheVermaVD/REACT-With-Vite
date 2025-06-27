@@ -1,7 +1,11 @@
 
+/* Moduler CSS Used : For generting a unique code for css for while elements get rendring on UI. */
+
 .main-container{
     border: 1px solid black ;
-    width: 200px ;
+    width: 350px ;
     border-radius: 5px;
+
   
 }
+

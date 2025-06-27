@@ -25,7 +25,7 @@ export default function LearnUseStateWithObjectData() {
     setValues({ ...values, [e.target.name] : e.target.value  });
     //Note : We use array like notation to access and object value in form of an string as result which we want string property name.
 
-    //with Updater Function styel state update -
+    //with Updater Function style state update -
 
     const name = e.target.name;
     const value = e.target.value;

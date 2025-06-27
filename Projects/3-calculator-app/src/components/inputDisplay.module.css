@@ -1,0 +1,16 @@
+
+#inputDisplay{
+
+    margin: 20px;
+    padding: 12px 44px;
+    font-size: 20px;
+    /* width:  120px ; */
+    font-size: larger;
+    /* border: 1px rgba(0, 0, 0, 0.753) solid; */
+    border: 1px black solid;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+
+    text-align: right;
+}

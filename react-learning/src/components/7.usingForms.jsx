@@ -17,7 +17,7 @@ Utilizing onSubmit event handler for form submission to server and can use e.pre
 Form Validation : Implement custom i.e manual form validation or use third party library for form validation at client side before form data can be submitted to server side.
 -----------------------------------------------------------
 
-UnControlled Component : In controlled component form handling, we directly manipulate browse DOM for field input changed rather storing uisng state management.
+UnControlled Component : In un-controlled component form handling, we directly manipulate browse DOM for field input changed rather storing uisng state management.
 
 
 It is alternative to controlled component form handling as in controlled component form, we need to write an event handler for every changes of data and this can be manage using usestate Hook. But if we want to avoid use state for input field input change we can use uncontrolled form component where you can use a 'ref' to get form values from the Browser DOM.
